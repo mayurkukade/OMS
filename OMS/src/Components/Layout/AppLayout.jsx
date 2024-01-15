@@ -7,7 +7,7 @@ export default function AppLayout() {
   return (
     <div className='flex min-h-screen justify-center'>
         <div>
-        <header className='w-[80rem]'>
+        <header className='md:w-[80rem] '>
          <Navbars/>
         </header>
        

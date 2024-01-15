@@ -1,172 +1,237 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import {
-    Menu,
-    MenuHandler,
-    MenuList,
+    Card,
+    Typography,
+    List,
+    ListItem,
+    ListItemPrefix,
+    Accordion,
+    AccordionHeader,
+    AccordionBody,
   } from "@material-tailwind/react";
-  import { ChevronDownIcon } from "@heroicons/react/24/outline";
+  import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+  import { IoIosPeople } from "react-icons/io";
+  import { FaTasks } from "react-icons/fa";
+  import { FaPeopleRoof } from "react-icons/fa6";
+  import { TbReportSearch } from "react-icons/tb";
+  import { MdOutlineAccountBalance } from "react-icons/md";
 
 export default function Dashboardsidebar() {
-    const [openMenu, setOpenMenu] = React.useState(false);
-    const [openMenu1, setOpenMenu1] = React.useState(false);
-    const [openMenu2, setOpenMenu2] = React.useState(false);
-    const [openMenu3, setOpenMenu3] = React.useState(false);
-    const [openMenu4, setOpenMenu4] = React.useState(false);
-
+    const [open, setOpen] = React.useState(0);
+    const [sidebarVisible, setSidebarVisible] = React.useState(true);
+ 
+  const handleOpen = (value) => {
+    setOpen(open === value ? 0 : value);
+  };
 
   return (
     <div>
-      <div className=" mt-5 sm:flex hidden ml-2 ">
-        <div className="border border-gray-300 rounded-md p-4">
-          {/* Clients */}
-          <Link to="/">
-           <Menu open={openMenu} handler={setOpenMenu} allowHover>
-      <MenuHandler>
-        <button
-          variant="text"
-          className="flex items-center gap-1  font-semibold text-md "
-        >
-         Clients{" "} 
-          <ChevronDownIcon
-            strokeWidth={2.5}
-            className={`h-3.5 w-3.5 transition-transform ml-[4.55rem] ${
-              openMenu ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-      </MenuHandler>
-      <MenuList className="">
-        <div className="cursor-pointer py-1">
-          <p>Client List</p>
-        </div>
-        <div className="cursor-pointer py-1">
-           <p> Add Client</p>
-        </div>
-   
-      </MenuList>
-           </Menu>
-          </Link>
+      <div className=" mt-5">
+        <Card className=" shadow-lg md:block hidden shadow-blue-gray-900 pb-2">
+      <div className="mb-2 p-4">
+        <Typography variant="h5" color="blue-gray" className={`${sidebarVisible ? " " : " text-xs"}`}>
+          Dashboard
+        </Typography>
+        <button className= {`h-3.5 w-3.5  ${sidebarVisible ? "ml-[12.7rem] ": "ml-12"}`} onClick={() => setSidebarVisible(!sidebarVisible)}>
+    <ChevronRightIcon strokeWidth={2.5} className={` transition-transform duration-500 ease-in-out  ${sidebarVisible ? "rotate-180" : " "}`}   />
+  </button>
+      </div>
+      <div className="flex">
 
-          {/* Task */}
-          <Link to="/example2">
-            <div className="mt-5">  
-          <Menu open={openMenu1} handler={setOpenMenu1} allowHover >
-      <MenuHandler>
-        <button
-          variant="text"
-          className="flex items-center gap-1  font-semibold text-md "
-        >
-         Task{" "} 
-          <ChevronDownIcon
-            strokeWidth={2.5}
-            className={`h-3.5 w-3.5 transition-transform ml-[5.7rem] ${
-              openMenu1 ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-      </MenuHandler>
-      <MenuList className="">
-        <div className="cursor-pointer py-1">
-          <p>Client List</p>
+        <div className={`mt-8  ${sidebarVisible ? "hidden": " ml-8"}`}>
+ 
+        <div>
+        <IoIosPeople  className="h-8 w-8" />
         </div>
-        <div className="cursor-pointer py-1">
-           <p> Add Client</p>
-        </div>
-   
-      </MenuList>
-    </Menu>
-            </div>
-          </Link>
 
-          {/* Attendance*/}
-          <div className="mt-5">  
-          <Menu open={openMenu2} handler={setOpenMenu2} allowHover >
-      <MenuHandler>
-        <button
-          variant="text"
-          className="flex items-center gap-1  font-semibold text-md "
-        >
-         Attendance{" "} 
-          <ChevronDownIcon
-            strokeWidth={2.5}
-            className={`h-3.5 w-3.5 transition-transform ml-10 ${
-              openMenu2 ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-      </MenuHandler>
-      <MenuList className="">
-        <div className="cursor-pointer py-1">
-          <p>Client List</p>
+        <div className="mt-8">
+        <FaTasks  className="h-6 w-6" />
         </div>
-        <div className="cursor-pointer py-1">
-           <p> Add Client</p>
+        <div className="mt-8">
+        <FaPeopleRoof className="h-6 w-6" />
         </div>
-   
-      </MenuList>
-    </Menu>
-          </div>
+        <div className="mt-8">
+        <TbReportSearch className="h-7 w-7" />
+        </div>
+        <div className="mt-8">
+        <MdOutlineAccountBalance  className="h-7 w-7" />
+        </div>
+      
+        </div>
 
-          {/* Report */}
-          <div className="mt-5">  
-          <Menu open={openMenu3} handler={setOpenMenu3} allowHover >
-      <MenuHandler>
-        <button
-          variant="text"
-          className="flex items-center gap-1  font-semibold text-md "
+      <List className={`transition-transform duration-10000 ease-in-out ${sidebarVisible ? '' : 'hidden'}`}>
+        <Link to="/">
+           <Accordion
+          open={open === 1}
+          icon={
+            <ChevronDownIcon
+              strokeWidth={2.5}
+              className={`mx-auto h-4 w-4 transition-transform ${open === 1 ? "rotate-180" : ""}`}
+            />
+          }
         >
-         Report{" "} 
-          <ChevronDownIcon
-            strokeWidth={2.5}
-            className={`h-3.5 w-3.5 transition-transform ml-[4.65rem] ${
-              openMenu3 ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-      </MenuHandler>
-      <MenuList className="">
-        <div className="cursor-pointer py-1">
-          <p>Client List</p>
-        </div>
-        <div className="cursor-pointer py-1">
-           <p> Add Client</p>
-        </div>
-   
-      </MenuList>
-    </Menu>
-          </div>
+          <ListItem className="p-0" selected={open === 1}>
+            <AccordionHeader onClick={() => handleOpen(1)} className="border-b-0 p-3">
+            <ListItemPrefix>
+                <IoIosPeople  className="h-8 w-8" />
+              </ListItemPrefix>
+              <Typography color="blue-gray" className="mr-auto font-normal">
+                Clients
+              </Typography>
+            </AccordionHeader>
+          </ListItem>
+          <AccordionBody className="py-1">
+            <List className="p-0">
+              <ListItem>
+                Clients List
+              </ListItem>
+              <ListItem>
+                Add Clients
+              </ListItem>
+             
+            </List>
+          </AccordionBody>
+           </Accordion>
+        </Link>
 
-          {/* Accounting */}
-          <div className="mt-5">  
-          <Menu open={openMenu4} handler={setOpenMenu4} allowHover >
-      <MenuHandler>
-        <button
-          variant="text"
-          className="flex items-center gap-1  font-semibold text-md "
+        <Link to="/example2">
+          <Accordion
+          open={open === 2}
+          icon={
+            <ChevronDownIcon
+              strokeWidth={2.5}
+              className={`mx-auto h-4 w-4 transition-transform ${open === 2 ? "rotate-180" : ""}`}
+            />
+          }
         >
-         Accounting{" "} 
-          <ChevronDownIcon
-            strokeWidth={2.5}
-            className={`h-3.5 w-3.5 transition-transform ml-[2.35rem] ${
-              openMenu4 ? "rotate-180" : ""
-            }`}
-          />
-        </button>
-      </MenuHandler>
-      <MenuList className="">
-        <div className="cursor-pointer py-1">
-          <p>Client List</p>
-        </div>
-        <div className="cursor-pointer py-1">
-           <p> Add Client</p>
-        </div>
-   
-      </MenuList>
-    </Menu>
-          </div>
+          <ListItem className="p-0" selected={open === 2}>
+            <AccordionHeader onClick={() => handleOpen(2)} className="border-b-0 p-3">
+            <ListItemPrefix>
+              <FaTasks  className="h-6 w-6" />
+            </ListItemPrefix>
+              <Typography color="blue-gray" className="mr-auto font-normal ml-2.5">
+                Task
+              </Typography>
+            </AccordionHeader>
+          </ListItem>
+          <AccordionBody className="py-1">
+            <List className="p-0">
+              <ListItem>
+                Clients List
+              </ListItem>
+              <ListItem>
+                Add Clients
+              </ListItem>
+             
+            </List>
+          </AccordionBody>
+          </Accordion>
+        </Link>
 
-        </div>
+        <Link to="/example3">
+           <Accordion
+          open={open === 3}
+          icon={
+            <ChevronDownIcon
+              strokeWidth={2.5}
+              className={`mx-auto h-4 w-4 transition-transform ${open === 3 ? "rotate-180" : ""}`}
+            />
+          }
+        >
+          <ListItem className="p-0" selected={open === 3}>
+            <AccordionHeader onClick={() => handleOpen(3)} className="border-b-0 p-3">
+            <ListItemPrefix>
+             <FaPeopleRoof className="h-6 w-6" />
+            </ListItemPrefix>
+              <Typography color="blue-gray" className="mr-auto font-normal ml-3">
+              Attendance
+              </Typography>
+            </AccordionHeader>
+          </ListItem>
+          <AccordionBody className="py-1">
+            <List className="p-0">
+              <ListItem>
+                Clients List
+              </ListItem>
+              <ListItem>
+                Add Clients
+              </ListItem>
+             
+            </List>
+          </AccordionBody>
+           </Accordion>
+        </Link>
+        
+        <Accordion
+          open={open === 4}
+          icon={
+            <ChevronDownIcon
+              strokeWidth={2.5}
+              className={`mx-auto h-4 w-4 transition-transform ${open === 4 ? "rotate-180" : ""}`}
+            />
+          }
+        >
+          <ListItem className="p-0" selected={open === 4}>
+            <AccordionHeader onClick={() => handleOpen(4)} className="border-b-0 p-3">
+            <ListItemPrefix>
+            <TbReportSearch className="h-7 w-7" />
+            </ListItemPrefix>
+              <Typography color="blue-gray" className="mr-auto font-normal ml-2.5">
+              Report
+              </Typography>
+            </AccordionHeader>
+          </ListItem>
+          <AccordionBody className="py-1">
+            <List className="p-0">
+              <ListItem>
+                Clients List
+              </ListItem>
+              <ListItem>
+                Add Clients
+              </ListItem>
+             
+            </List>
+          </AccordionBody>
+        </Accordion>
+
+        <Accordion
+          open={open === 5}
+          icon={
+            <ChevronDownIcon
+              strokeWidth={2.5}
+              className={`mx-auto h-4 w-4 transition-transform ${open === 5 ? "rotate-180" : ""}`}
+            />
+          }
+        >
+          <ListItem className="p-0" selected={open === 5}>
+            <AccordionHeader onClick={() => handleOpen(5)} className="border-b-0 p-3">
+            <ListItemPrefix>
+              <MdOutlineAccountBalance  className="h-7 w-7" />
+            </ListItemPrefix>
+              <Typography color="blue-gray" className="mr-auto font-normal ml-2.5">
+              Accounting
+              </Typography>
+            </AccordionHeader>
+          </ListItem>
+          <AccordionBody className="py-1">
+            <List className="p-0">
+              <ListItem>
+                Clients List
+              </ListItem>
+              <ListItem>
+                Add Clients
+              </ListItem>
+             
+            </List>
+          </AccordionBody>
+        </Accordion>
+
+      </List>
+      </div>
+    </Card>
+
       </div>
     </div>
   );

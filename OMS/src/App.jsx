@@ -1,8 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import AppLayout from "./Components/Layout/AppLayout";
-import Example from "./Components/Example";
-import Example2 from "./Components/Example2";
-import Example3 from "./Components/Example3";
+import Homedashboard from "./Components/Dashboard/Homedashboard";
+import Clientlist from "./Components/Dashboard/Clientlist";
 
 function App() {
   
@@ -10,9 +9,9 @@ function App() {
     <>
     <Routes>
       <Route element={<AppLayout/>}>
-        <Route path="/" element={<Example/>}/>
-        <Route path="/example2" element={<Example2/>}/>
-        <Route path="/example3" element={<Example3/>}/>
+        {/* <Route path="/" element={<Homedashboard/>}/> */}
+        <Route path="/" element={<Clientlist/>}/>
+     
       </Route>
     </Routes>
     </>
