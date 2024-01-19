@@ -14,7 +14,7 @@ export default function AppLayout() {
         
         
         <div className='mt-2 flex '>
-         <Dashboardsidebar/>
+         <Dashboardsidebar />
          <Outlet/>
         </div>
         

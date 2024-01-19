@@ -1,27 +1,68 @@
-
 import React from 'react'
+import {  FaRegCopy } from "react-icons/fa";
+import { IoIosPeople } from "react-icons/io";
+import { Progress } from "@material-tailwind/react";
 import { Card, Typography, Button } from "@material-tailwind/react";
 import {TABLE_HEAD, TABLE_ROWS} from "../Data/ClientlistData";
 import { FaFilePdf } from "react-icons/fa6";
 import { BsFiletypeXls } from "react-icons/bs";
 
-
-export default function Clientlist() {
-
+export default function RunningTask() {
   return (
     <div className='flex'>
-       <div className='mt-5'>
-         <div className=' md:ml-[20rem] border border-gray-500 md:w-[12rem] w-48 ml-20 px-3 py-2 rounded-md'>
-            <p className='text-2xl font-medium'>Total Client :- 3 </p>
-         </div>
+      <div>
+         {/* Upeer part */}
+         <div className="flex  md:ml-[15rem]">
+          <div className="border border-gray-800 rounded-lg py-3 px-5">
+            <p>Running project</p>
+            <div className="flex">
+              <div>
+                <FaRegCopy className="h-8 w-8" />
+              </div>
+              <div className="ml-14">
+                <p className="text-3xl">3</p>
+              </div>
+            </div>
+          </div>
 
-         <div className='mt-10 md:ml-[5rem]'>
+          <div className="border border-gray-800 rounded-lg py-3 px-3 ml-10">
+            <p>Active Employees</p>
+            <div className="flex">
+              <div>
+                <IoIosPeople className="h-8 w-8" />
+              </div>
+              <div className="ml-14">
+                <p className="text-3xl">3</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Upeer part  end*/}
+
+         {/* upper lower part */}
+         <div className="mt-20 md:ml-48">
+          <p className="text-xl font-semibold">Running Project :- </p>
+          <div className="border border-gray-500 py-5 px-6 rounded-lg mt-5 md:w-[30rem] w-[22rem]">
+            <div>
+              <p>Website development</p>
+              <Progress value={80} label="Completed" color="green" />
+            </div>
+
+            <div className="mt-5">
+              <p>Software development</p>
+              <Progress value={50} label="in Pogress" color="blue" />
+            </div>
+          </div>
+        </div>
+        {/* upper lower part end */}
+
+        <div className='mt-10 md:ml-48'>
             <p className='text-semibold text-3xl'>Client List :-</p>
          </div>
 
-          <div className='flex mt-5'>
+          <div className='flex mt-5 md:ml-28'>
          <div className=' md:ml-[5rem]'>
-            <Button className='bg-blue-400 text-black'>Add Client</Button>
+            <Button className='bg-blue-400 text-black'>Add Project</Button>
          </div>
 
          <div className='mt-2 ml-10'>
@@ -35,7 +76,7 @@ export default function Clientlist() {
          </div>
 
          {/* Table start */}
-         <Card className=" md:w-full w-[24rem] overflow-auto mt-5 md:ml-[5rem]">
+         <Card className=" md:w-[56rem] w-[24rem] overflow-auto mt-5 md:ml-36">
       <table className="w-full min-w-max table-auto text-left">
         <thead>
           <tr>
@@ -163,8 +204,7 @@ export default function Clientlist() {
          </Card>
         {/* Table end */}
 
-          
-       </div>
+      </div>
     </div>
   )
 }

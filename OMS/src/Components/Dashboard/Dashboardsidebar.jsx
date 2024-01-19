@@ -62,7 +62,7 @@ export default function Dashboardsidebar() {
         </div>
 
       <List className={`transition-transform duration-10000 ease-in-out ${sidebarVisible ? '' : 'hidden'}`}>
-        <Link to="/">
+        <Link to="/clientlist">
            <Accordion
           open={open === 1}
           icon={
@@ -87,16 +87,17 @@ export default function Dashboardsidebar() {
               <ListItem>
                 Clients List
               </ListItem>
+              <Link to="/addclient">
               <ListItem>
                 Add Clients
               </ListItem>
-             
+              </Link>
             </List>
           </AccordionBody>
            </Accordion>
         </Link>
 
-        <Link to="/example2">
+        <Link to="/task">
           <Accordion
           open={open === 2}
           icon={
@@ -118,19 +119,23 @@ export default function Dashboardsidebar() {
           </ListItem>
           <AccordionBody className="py-1">
             <List className="p-0">
+              <Link to="/runningtask">
               <ListItem>
-                Clients List
+                Running task
               </ListItem>
+              </Link>
+
+              <Link to="/addproject">
               <ListItem>
-                Add Clients
+                Add Project
               </ListItem>
-             
+              </Link>
             </List>
           </AccordionBody>
           </Accordion>
         </Link>
 
-        <Link to="/example3">
+        <Link to="">
            <Accordion
           open={open === 3}
           icon={
