@@ -14,9 +14,10 @@ import {
   import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
   import { IoIosPeople } from "react-icons/io";
   import { FaTasks } from "react-icons/fa";
-  import { FaPeopleRoof } from "react-icons/fa6";
+  import { FaPeopleRoof,FaPeopleRobbery  } from "react-icons/fa6";
   import { TbReportSearch } from "react-icons/tb";
   import { MdOutlineAccountBalance } from "react-icons/md";
+  import { VscTasklist } from "react-icons/vsc";
 
 export default function Dashboardsidebar() {
     const [open, setOpen] = React.useState(0);
@@ -158,10 +159,10 @@ export default function Dashboardsidebar() {
           <AccordionBody className="py-1">
             <List className="p-0">
               <ListItem>
-                Clients List
+              Attendance History
               </ListItem>
               <ListItem>
-                Add Clients
+              Attendance Report
               </ListItem>
              
             </List>
@@ -190,13 +191,23 @@ export default function Dashboardsidebar() {
           </ListItem>
           <AccordionBody className="py-1">
             <List className="p-0">
+              
               <ListItem>
-                Clients List
+              Project Report
               </ListItem>
+              
+
+              <Link to="/clientreport">
               <ListItem>
-                Add Clients
+               Clients   Report
               </ListItem>
-             
+              </Link>
+              <Link to="/expence">
+              <ListItem>
+               Expences  Report
+              </ListItem>
+              </Link>
+
             </List>
           </AccordionBody>
         </Accordion>
@@ -222,15 +233,39 @@ export default function Dashboardsidebar() {
           </ListItem>
           <AccordionBody className="py-1">
             <List className="p-0">
+              <Link to="/addclientpayment">
               <ListItem>
-                Clients List
+                 Client Payment
               </ListItem>
-              <ListItem>
-                Add Clients
-              </ListItem>
-             
+              </Link>
             </List>
           </AccordionBody>
+        </Accordion>
+
+        <Accordion>
+          <ListItem className="p-0" >
+            <AccordionHeader  className="border-b-0 p-3">
+            <ListItemPrefix>
+            <VscTasklist   className="h-7 w-7" />
+            </ListItemPrefix>
+              <Typography color="blue-gray" className="mr-auto font-normal ml-2.5">
+              Leave Management
+              </Typography>
+            </AccordionHeader>
+          </ListItem>
+        </Accordion>
+
+        <Accordion>
+          <ListItem className="p-0" >
+            <AccordionHeader className="border-b-0 p-3">
+            <ListItemPrefix>
+            <FaPeopleRobbery   className="h-7 w-7" />
+            </ListItemPrefix>
+              <Typography color="blue-gray" className="mr-auto font-normal ml-2.5">
+              Employee Developmen
+              </Typography>
+            </AccordionHeader>
+          </ListItem>
         </Accordion>
 
       </List>
