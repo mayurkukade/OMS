@@ -30,7 +30,6 @@ export function SignUp() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // TODO: Add your signup logic here using formData
         console.log('Form submitted:', formData);
     };
 
@@ -42,7 +41,7 @@ export function SignUp() {
                 backgroundImage: `url('${signInImage}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
-                minHeight: "50vh", // Adjust the height as needed
+                minHeight: "50vh",
             }}
         >
             <Typography variant="h4" color="blue-gray">
