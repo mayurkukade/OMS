@@ -6,6 +6,7 @@ import {
     IconButton,
     Tooltip,
     Input,
+    Button,
 } from "@material-tailwind/react";
 
 import pdf from "../Images/pdf.svg";
@@ -80,8 +81,11 @@ function AttendenceHistory() {
                             <img src={pdf} alt="" className="w-8" />
                             <img src={csv} alt="" className="w-8" />
                             <img src={xls} alt="" className="w-8" />
-                            <div className="w-[10rem]">
+                            <div className="w-[10rem] ">
                                 <Input size="lg" type="date" className="border border-blue-gray-900 " />
+                            </div>
+                            <div className="w-[10rem] ">
+                                <Button size="lg" type="button" className="border border-blue-gray-900 " />
                             </div>
                         </div>
                         <div className="flex space-x-4 mt-3 pb-5 ml-6">
