@@ -15,7 +15,7 @@ import AttendenceHistory from "./Components/Dashboard/AttendenceHistory"
 import ProjectReport from "./Components/Dashboard/ProjectReport";
 import AddTask2 from "./Components/Dashboard/AddTask2";
 import AddAttendee from "./Components/Dashboard/AddAttendee";
-import ClientPaymentReport from "./Components/Dashboard/ClientPaymentReport";
+import ClientPaymentReport from "./Components/Dashboard/ClientPaymentReport" ;
 
 
 function App() {
