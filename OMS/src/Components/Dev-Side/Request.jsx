@@ -48,11 +48,13 @@ export function Request() {
  
   return (
     <>
-<CommonNavSide />
-<div className="container mx-auto mt-8">
+
+<div class="grid grid-flow-col auto-cols-max">
+  <div><CommonNavSide /></div>
+  <div>
+    <div className="container mt-8 w-[50rem] place-items-center flex">
       <form className="max-w-[50rem] mx-auto bg-white p-8 border border-gray-300 shadow-md rounded-md">
         <h1>Request</h1>
-        {/* <hr className="my-2 border-black" />     */}
         <div className="flex mb-4">
           <div className="w-1/2 pr-4">
             <label htmlFor="firstName" className="block text-sm font-medium text-gray-600">
@@ -153,7 +155,11 @@ export function Request() {
           </button>
         </div>
       </form>
-    </div>
+    </div></div>
+  
+</div>
+
+
     
     </>
   );

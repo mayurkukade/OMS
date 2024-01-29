@@ -48,47 +48,75 @@ export function Ongoingtask() {
 
   return (
     <>
-    <CommonNavSide/>
 
-      <div className="contain flex justify-center  ">
-        <table className="h-[10rem] w-[40rem] border-collapse border border-black p-4">
-          <thead>
-            <tr>
-              <th className="border-black">Running task</th>
-            </tr>
-          </thead>
-       
-          <tbody>
-            <tr className="border-black flex items-center">
-              <td className="border-black p-[20px] flex items-center">
-                <div>
-                  <h1>Website Development</h1>
-                  <Progress value={50} color="amber" className="w-[40rem]" />
-                </div>
-                <p className="ml-2 mt-4">In process</p>
-              </td>
-            </tr>
+<div class="grid grid-flow-col auto-cols-max  ">
+  <div> <CommonNavSide/></div>
+  <div>  
+    <div className="contain flex justify-center mt-[4rem]  ">
+    <table className="h-[10rem] w-[40rem] border-collapse border border-black p-4">
+              <thead>
+                <tr>
+                  <th className="border-black text-black">Running task</th>
+                </tr>
+              </thead>
 
-            <tr className="border-black flex items-center">
-              <td className="border-black p-[20px] flex items-center">
-                <div>
-                  <h1>Software Development</h1>
-                  <Progress value={50} color="amber" className="w-[40rem]" />
-                </div>
-                <p className="ml-2 mt-4">Paused</p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+              <tbody className="text-black">
+                <tr className="border-black flex items-center">
+                  <td className="border-black p-[20px] flex items-center">
+                    <div>
+                      <h1>Website Development</h1>
+                      <div className="w-full">
+                        <div className="mb-2 flex items-center justify-between gap-4">
+                          <Typography
+                            color="blue-gray"
+                            variant="h6"
+                            className="w-[40rem]"
+                          >
+                            Completed
+                          </Typography>
+                          <Typography color="blue-gray" variant="h6">
+                            50%
+                          </Typography>
+                        </div>
+                        <Progress value={50} />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="border-black flex items-center">
+                  <td className="border-black p-[20px] flex items-center">
+                    <div>
+                      <h1>Software Development</h1>
+                      <div className="w-full">
+                        <div className="mb-2 flex items-center justify-between gap-4">
+                          <Typography
+                            color="blue-gray"
+                            variant="h6"
+                            className="w-[40rem]"
+                          >
+                            Completed
+                          </Typography>
+                          <Typography color="blue-gray" variant="h6">
+                            50%
+                          </Typography>
+                        </div>
+                        <Progress value={50} />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
       </div>
-      <div className="class flex text-center justify-center mt-[4rem]">
+      <div className="class flex text-center justify-center mt-[4rem] text-black">
         <h1>Running Tasks</h1>
       </div>
-      <div className="container">
-        <div class="grid grid-cols-3 gap-2 place-items-center mt-4 justify-center">
+      <div className="container ">
+        <div class="grid grid-cols-3 gap-2 place-items-center mt-4 justify-center text-center">
           <div class="text-start w-1/4  ">Token Id</div>
           <div class="w-1/2">
-            <Input label="Username" />
+            <Input />
           </div>
           <div class="flex place-items-center">
             <Checkbox />
@@ -97,7 +125,7 @@ export function Ongoingtask() {
 
           <div class="text-start w-1/4">Due Date</div>
           <div class="w-1/2">
-            <Input label="Username" />
+            <Input  />
           </div>
           <div class="flex place-items-center">
             <Checkbox />
@@ -106,7 +134,7 @@ export function Ongoingtask() {
 
           <div class="text-start w-1/4">Project Name</div>
           <div class="w-1/2">
-            <Input label="Username" />
+            <Input  />
           </div>
           <div class="flex place-items-center">
             <Checkbox />
@@ -115,13 +143,13 @@ export function Ongoingtask() {
         </div>
       </div>
       <div className="grid grid-cols-3 mt-2">
-        <div className="name text-center ml-[-2.8rem]">Description</div>
+        <div className="name text-center">Description</div>
         <div className="description flex justify-center ml-[6.5rem]">
           <Textarea className="col-span-2 " />
         </div><br></br>
       </div>
       <div className="grid grid-cols-3 mt-2">
-        <div className="name text-center ml-[-2.8rem]">Comments</div>
+        <div className="name text-center ]">Comments</div>
         <div className="Comments flex justify-center ml-[6.5rem]">
           <Textarea className="col-span-2 " />
         </div><br></br>
@@ -132,12 +160,12 @@ export function Ongoingtask() {
           </button>
         </div>
 
-<div className="border border-black p-4 mt-[2rem]">
+<div className=" p-4 mt-[2rem]">
       <div className="container mt-[2rem]">
         <div class="grid grid-cols-3 gap-2 place-items-center mt-4 justify-center">
           <div class="text-start w-1/4  ">Token Id</div>
           <div class="w-1/2">
-            <Input label="Username" />
+            <Input  />
           </div>
           <div class="flex place-items-center">
             <Checkbox />
@@ -146,7 +174,7 @@ export function Ongoingtask() {
 
           <div class="text-start w-1/4">Due Date</div>
           <div class="w-1/2">
-            <Input label="Username" />
+            <Input  />
           </div>
           <div class="flex place-items-center">
             <Checkbox />
@@ -155,7 +183,7 @@ export function Ongoingtask() {
 
           <div class="text-start w-1/4">Project Name</div>
           <div class="w-1/2">
-            <Input label="Username" />
+            <Input  />
           </div>
           <div class="flex place-items-center">
             <Checkbox />
@@ -164,8 +192,8 @@ export function Ongoingtask() {
         </div>
       </div>
       <div className="grid grid-cols-3 mt-2 ">
-        <div className="name text-center ml-[-2.8rem]">Description</div>
-        <div className="description justify-start ml-[7rem]">
+        <div className="name text-center ">Description</div>
+        <div className="description  ">
           <Textarea className="col-span-2 "  />
         </div>
       </div>
@@ -179,7 +207,14 @@ export function Ongoingtask() {
             Save changes
           </button>
         </div>
-        </div>
+        </div></div>
+
+</div>
+
+
+   
+
+    
     </>
   );
 }
