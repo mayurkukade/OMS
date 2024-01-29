@@ -7,8 +7,13 @@ import { MdCancel } from "react-icons/md";
 import { TiArrowMinimise } from "react-icons/ti";
 import { Card, Typography } from "@material-tailwind/react";
 import {TABLE_HEAD,TABLE_ROWS} from "../Data/TaskData"
+import { useNavigate } from "react-router-dom";
 
 export default function Task() {
+  const navigate = useNavigate();
+  function Navigate () {
+    navigate("/addtask")
+  }
   return (
     <div className="flex ">
       <div>
@@ -75,7 +80,7 @@ export default function Task() {
           <hr />
           <div className="flex mt-5 px-2 py-2">
             <div className=" ">
-              <Button className="bg-blue-400 text-black">Add Task</Button>
+              <Button className="bg-blue-400 text-black" onClick={Navigate}>Add Task</Button>
             </div>
 
             <div className="mt-2 ml-10">

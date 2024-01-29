@@ -32,9 +32,11 @@ export default function Dashboardsidebar() {
       <div className=" mt-5">
         <Card className=" shadow-lg md:block hidden shadow-blue-gray-900 pb-2">
       <div className="mb-2 p-4">
+        <Link to="/">
         <Typography variant="h5" color="blue-gray" className={`${sidebarVisible ? " " : " text-xs"}`}>
           Dashboard
         </Typography>
+        </Link>
         <button className= {`h-3.5 w-3.5  ${sidebarVisible ? "ml-[12.7rem] ": "ml-12"}`} onClick={() => setSidebarVisible(!sidebarVisible)}>
     <ChevronRightIcon strokeWidth={2.5} className={` transition-transform duration-500 ease-in-out  ${sidebarVisible ? "rotate-180" : " "}`}   />
   </button>
@@ -59,10 +61,17 @@ export default function Dashboardsidebar() {
         <div className="mt-8">
         <MdOutlineAccountBalance  className="h-7 w-7" />
         </div>
+        <div className="mt-8">
+        <VscTasklist   className="h-7 w-7" />
+        </div>
+        <div className="mt-8">
+        <FaPeopleRobbery   className="h-7 w-7" />
+        </div>
       
         </div>
 
       <List className={`transition-transform duration-10000 ease-in-out ${sidebarVisible ? '' : 'hidden'}`}>
+       
         <Link to="/clientlist">
            <Accordion
           open={open === 1}
@@ -136,7 +145,7 @@ export default function Dashboardsidebar() {
           </Accordion>
         </Link>
 
-        <Link to="">
+        <Link>
            <Accordion
           open={open === 3}
           icon={
@@ -158,13 +167,18 @@ export default function Dashboardsidebar() {
           </ListItem>
           <AccordionBody className="py-1">
             <List className="p-0">
+              <Link to="/attendencehistory">
               <ListItem>
               Attendance History
               </ListItem>
+              </Link>
+
+              <Link to="/attendencereoprt">
               <ListItem>
               Attendance Report
               </ListItem>
-             
+              </Link>
+
             </List>
           </AccordionBody>
            </Accordion>
@@ -191,18 +205,18 @@ export default function Dashboardsidebar() {
           </ListItem>
           <AccordionBody className="py-1">
             <List className="p-0">
-              
+              <Link to="/Projectreport">
               <ListItem>
               Project Report
               </ListItem>
-              
+              </Link>
 
               <Link to="/clientreport">
               <ListItem>
                Clients   Report
               </ListItem>
               </Link>
-              <Link to="/expence">
+              <Link to="/expencereport">
               <ListItem>
                Expences  Report
               </ListItem>
@@ -233,9 +247,14 @@ export default function Dashboardsidebar() {
           </ListItem>
           <AccordionBody className="py-1">
             <List className="p-0">
-              <Link to="/addclientpayment">
+              <Link to="/addclientpaymentacc">
               <ListItem>
                  Client Payment
+              </ListItem>
+              </Link>
+              <Link to="/clientpaymentreport">
+              <ListItem>
+                 Client Payment Report
               </ListItem>
               </Link>
             </List>

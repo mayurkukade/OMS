@@ -8,8 +8,15 @@ import RunningTask from "./Components/Dashboard/RunningTask";
 import AddProject from "./Components/Dashboard/AddProject";
 import AddClientPaymentAcc from "./Components/ClientReport/AddClientPaymentAcc";
 import AddExpence from "./Components/ClientReport/AddExpence"
-import ExpencePage from "./Components/ClientReport/ExpensePage"
-import ClientReport from "./Components/ClientReport/ClientReport"
+import ExpenceReport from "./Components/Dashboard/ExpenceReport"
+import ClientReport from "./Components/Dashboard/ClientReport"
+import AttendenceReport from "./Components/Dashboard/AttendenceReport"
+import AttendenceHistory from "./Components/Dashboard/AttendenceHistory"
+import ProjectReport from "./Components/Dashboard/ProjectReport";
+import AddTask2 from "./Components/Dashboard/AddTask2";
+import AddAttendee from "./Components/Dashboard/AddAttendee";
+import ClientPaymentReport from "./Components/Dashboard/ClientPaymentReport";
+
 
 function App() {
   
@@ -26,8 +33,16 @@ function App() {
         <Route path="/addproject" element={<AddProject/>}/>
         <Route path="/addclientpayment" element={<AddClientPaymentAcc/>}/>
         <Route path="/addexpence" element={<AddExpence/>}/>
-        <Route path="/expence" element={<ExpencePage/>}/>
+        <Route path="/expencereport" element={<ExpenceReport/>}/>
         <Route path="/clientreport" element={<ClientReport/>}/>
+        <Route path="/attendencereoprt" element={<AttendenceReport/>}/>
+        <Route path="/attendencehistory" element={<AttendenceHistory/>}/>
+        <Route path="/Projectreport" element={<ProjectReport/>}/>
+        <Route path="/addtask" element={<AddTask2/>}/>
+        <Route path="/addattendee" element={<AddAttendee/>}/>
+        <Route path="/addclientpaymentacc" element={<AddClientPaymentAcc/>}/>
+        <Route path="/clientpaymentreport" element={<ClientPaymentReport/>}/>
+        
      
       </Route>
     </Routes>
