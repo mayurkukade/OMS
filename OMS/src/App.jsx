@@ -16,6 +16,12 @@ import ProjectReport from "./Components/Dashboard/ProjectReport";
 import AddTask2 from "./Components/Dashboard/AddTask2";
 import AddAttendee from "./Components/Dashboard/AddAttendee";
 import ClientPaymentReport from "./Components/Dashboard/ClientPaymentReport" ;
+import DevDash from "./Components/Dev-Side/DevDash";
+import Ongoingtask from "./Components/Dev-Side/Ongoingtask";
+import Request from "./Components/Dev-Side/Request";
+import Home from "./Components/OMS_EMP_BDE/Home";
+import Requests from "./Components/OMS_EMP_BDE/Requests";
+import Taskss from "./Components/OMS_EMP_BDE/Taskss";
 
 
 function App() {
@@ -42,9 +48,18 @@ function App() {
         <Route path="/addattendee" element={<AddAttendee/>}/>
         <Route path="/addclientpaymentacc" element={<AddClientPaymentAcc/>}/>
         <Route path="/clientpaymentreport" element={<ClientPaymentReport/>}/>
-        
-     
       </Route>
+
+      
+       
+        <Route path="/devdash" element={<DevDash/>}/>
+        <Route path="/ongoingtask" element={<Ongoingtask/>}/>
+        <Route path="/request" element={<Request/>}/>
+
+
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/requests" element={<Requests/>}/>
+        <Route path="/taskss" element={<Taskss/>}/>
     </Routes>
     </>
   )
