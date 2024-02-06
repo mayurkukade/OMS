@@ -1,27 +1,19 @@
-// import { useState } from 'react';
-import { PencilIcon } from "@heroicons/react/24/solid";
 import {
+    CardBody,
     Card,
     Typography,
-    CardBody,
-    IconButton,
     Tooltip,
-    List,
-    ListItem,
-    ListItemPrefix,
+    IconButton,
 } from "@material-tailwind/react";
-import {
-    PresentationChartBarIcon,
-    ShoppingBagIcon,
-    InboxIcon,
-} from "@heroicons/react/24/solid";
-import { Link } from 'react-router-dom';
+import { PencilIcon } from "@heroicons/react/24/solid";
 
-function Tasks() {
+function Task2() {
 
-    const TABLE_HEAD = ["No.", "Task", "Assigned To", "Assigned Date", "End Date", "Messages", "Calls", "Stauts", "Action", ""];
+    // Task Page
 
-    const TABLE_ROWS = [
+    const TABLE_HEAD1 = ["No.", "Task", "Assigned To", "Assigned Date", "End Date", "Messages", "Calls", "Stauts", "Action", ""];
+
+    const TABLE_ROWS1 = [
         {
             no: "1",
             task: "Calls/Messages",
@@ -63,36 +55,7 @@ function Tasks() {
     ];
 
     return (
-        <div className='flex flex-col md:flex-row'>
-            <Card className="h-[calc(30vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 ">
-                <List>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <PresentationChartBarIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Link to="/">
-                            Home
-                        </Link>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <ShoppingBagIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Link to="/tasks">
-                            <p>Tasks</p>
-                        </Link>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <InboxIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Link to="/requests">
-                            <p>Requests</p>
-                        </Link>
-                    </ListItem>
-                </List>
-            </Card>
-
+        <div>
             <div className='mr-32'>
 
                 {/* Total Calls/Messages */}
@@ -103,7 +66,7 @@ function Tasks() {
                         <table className="w-full min-w-max table-auto text-left">
                             <thead>
                                 <tr>
-                                    {TABLE_HEAD.map((head) => (
+                                    {TABLE_HEAD1.map((head) => (
                                         <th
                                             key={head}
                                             className="border-y border-blue-gray-100 bg-blue-gray-50/50 p-4"
@@ -120,7 +83,7 @@ function Tasks() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {TABLE_ROWS.map(
+                                {TABLE_ROWS1.map(
                                     (
                                         {
                                             no,
@@ -135,7 +98,7 @@ function Tasks() {
                                         },
                                         index,
                                     ) => {
-                                        const isLast = index === TABLE_ROWS.length - 1;
+                                        const isLast = index === TABLE_ROWS1.length - 1;
                                         const classes = isLast
                                             ? "p-4"
                                             : "p-4 border-b border-blue-gray-50";
@@ -478,4 +441,4 @@ function Tasks() {
     )
 }
 
-export default Tasks
+export default Task2

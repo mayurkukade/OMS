@@ -1,4 +1,4 @@
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import AddTask2 from './Components/Dashboards/AddTask2'
 // import AddToken from './Components/Dashboards/AddToken'
 // import CompletedTask from './Components/Dashboards/CompletedTask'
@@ -8,38 +8,44 @@
 // import ProjectReport from './Components/Dashboards/ProjectReport'
 // import ClientPaymentReport from './Components/Dashboards/ClientPaymentReport'
 // import ExpenceReport from './Components/Dashboards/ExpenceReport'
-import ClientReport from './Components/Dashboards/ClientReport'
+// import ClientReport from './Components/Dashboards/ClientReport'
+// import Home_Hr from "./Components/OMS_HR/Home_Hr"
+
+// Team Lead
+import { TeamLead } from './Components/Dashboards/TeamLead';
 
 // import Home from "./Components/OMS_EMP_BDE/Home"
-// import Tasks from './Components/OMS_EMP_BDE/Tasks';
-// import Request from './Components/OMS_EMP_BDE/Request';
 // import { SignUp } from './Components/SignUp';
 // import SignIn from './Components/SignIn';
 
 function App() {
   return (
     <>
-      {/* <AddTask2/> */}
-      {/* <AddToken/> */}
-      {/* <CompletedTask/> */}
-      {/* <AttendenceHistory/> */}
-      {/* <AddAttendee/> */}
-      {/* <AttendenceReport /> */}
-      {/* <ProjectReport/> */}
-      {/* <ClientPaymentReport/> */}
-      {/* <ExpenceReport/> */}
-      <ClientReport/>
-      
-      {/* <Router>
+      {/* <AddTask2/>
+      <AddToken/>
+      <CompletedTask/>
+      <AttendenceHistory/>
+      <AddAttendee/>
+      <AttendenceReport />
+      <ProjectReport/>
+      <ClientPaymentReport/>
+      <ExpenceReport/>
+      <ClientReport/> */}
+
+
+      {/* <Home_Hr/> */}
+      {/* <Interview_Hr/> */}
+      {/* <SideBar/> */}
+      <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tasks" element={<Tasks />} />
-          <Route path="/requests" element={<Request />} />
-          <Route path='/' element={<SignUp/>} />
+          {/* <Route path="/" element={<Home />} /> */}
+          {/* <Route path='/' element={<SignUp/>} />
           <Route path='/signIn' element={<SignIn/>} />
-          <Route path='/registerHere' element={<SignUp/>} />
+          <Route path='/registerHere' element={<SignUp/>} /> */}
+          {/* <Route path="/" element={<Home_Hr/>} /> */}
+          <Route path="/" element={<TeamLead/>} />
         </Routes>
-      </Router> */}
+      </Router>
     </>
 
   )

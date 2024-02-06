@@ -1,21 +1,12 @@
-import { useState } from 'react';
 import {
+    Button,
     Input,
-    Card,
-    List,
-    ListItem,
-    ListItemPrefix,
-    Button
 } from "@material-tailwind/react";
-import {
-    PresentationChartBarIcon,
-    ShoppingBagIcon,
-    InboxIcon,
-} from "@heroicons/react/24/solid";
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
-function Request() {
-    const [formData, setFormData] = useState({
+function Requestt() {
+
+    const [formData41, setFormData41] = useState({
         lRequest: '',
         reason: '',
         duration: '',
@@ -26,53 +17,26 @@ function Request() {
     });
 
 
-    const handleInputChange = (e) => {
+    const handleInputChange41 = (e) => {
         const { name, value } = e.target;
-        setFormData({
-            ...formData,
+        setFormData41({
+            ...formData41,
             [name]: value
         });
     };
 
 
-    const handleUpdate = () => {
-        console.log(formData);
+    const handleUpdate41 = () => {
+        console.log(formData41);
     };
-    return (
-        <div className='flex flex-col md:flex-row'>
-            <Card className="h-[calc(30vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 mt-20">
-                <List>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <PresentationChartBarIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Link to="/">
-                            Home
-                        </Link>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <ShoppingBagIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Link to="/tasks">
-                            Tasks
-                        </Link>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <InboxIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Link to="/requests">
-                            Requests
-                        </Link>
-                    </ListItem>
-                </List>
-            </Card>
 
+    return (
+        <div>
             <div className='md:mr-20'>
-                <div className="">
+                <div className="md:ml-36">
                     <div className='flex md:flex-row mt-10 md:ml-0 ml-0 gap-2'>
-                        <div className='flex space-x-5 md:ml-[30rem] ml-3'>
+                        <p className='text-3xl font-bold md:ml-0 ml-5'>Requests</p>
+                        <div className='flex space-x-5 md:ml-[15rem] ml-3'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29" fill="none">
                                 <path d="M19.375 20.5417H25.8333L24.0185 18.844C23.7748 18.6159 23.5815 18.3452 23.4496 18.0473C23.3178 17.7494 23.2499 17.43 23.25 17.1076V13.2917C23.2502 11.792 22.7534 10.3292 21.8282 9.10466C20.9029 7.88007 19.5946 6.95391 18.0833 6.45371V6.04167C18.0833 5.40073 17.8112 4.78604 17.3267 4.33283C16.8422 3.87961 16.1851 3.625 15.5 3.625C14.8148 3.625 14.1578 3.87961 13.6733 4.33283C13.1888 4.78604 12.9167 5.40073 12.9167 6.04167V6.45371C9.90707 7.44938 7.74999 10.1355 7.74999 13.2917V17.1088C7.74999 17.7589 7.47357 18.3836 6.98145 18.844L5.16666 20.5417H11.625M19.375 20.5417V21.75C19.375 22.7114 18.9667 23.6334 18.24 24.3133C17.5133 24.9931 16.5277 25.375 15.5 25.375C14.4723 25.375 13.4867 24.9931 12.76 24.3133C12.0332 23.6334 11.625 22.7114 11.625 21.75V20.5417M19.375 20.5417H11.625" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
@@ -86,47 +50,47 @@ function Request() {
                             Leave Request :
                         </p>
                         <div className="w-full md:w-[18rem] lg:w-[35rem]">
-                            <Input size="lg" label="Leave Request" placeholder="Enter your Leave Request" name='lRequest' value={formData.lRequest} onChange={handleInputChange} />
+                            <Input size="lg" label="Leave Request" placeholder="Enter your Leave Request" name='lRequest' value={formData41.lRequest} onChange={handleInputChange41} />
                         </div>
                         <p className='text-left text-lg mb-4'>
                             Reason :
                         </p>
                         <div className="w-full md:w-[18rem] lg:w-[35rem]">
-                            <Input size="lg" type="text" label="Reason" placeholder="Enter your Reason" name='reason' value={formData.reason} onChange={handleInputChange} />
+                            <Input size="lg" type="text" label="Reason" placeholder="Enter your Reason" name='reason' value={formData41.reason} onChange={handleInputChange41} />
                         </div>
                         <p className='text-left text-lg mb-4'>
                             Duration :
                         </p>
                         <div className="w-full md:w-[18rem] lg:w-[35rem]">
-                            <Input size="lg" type='number' label="Duration" placeholder="Enter your Duration" name='duration' value={formData.duration} onChange={handleInputChange} />
+                            <Input size="lg" type='number' label="Duration" placeholder="Enter your Duration" name='duration' value={formData41.duration} onChange={handleInputChange41} />
                         </div>
 
                         <p className='text-left text-lg mb-4'>
                             Start Date :
                         </p>
                         <div className="w-full md:w-[18rem] lg:w-[35rem]">
-                            <Input size="lg" label="Start Date" type='date' placeholder="Enter your Start Date" name='sDate' value={formData.sDate} onChange={handleInputChange} />
+                            <Input size="lg" label="Start Date" type='date' placeholder="Enter your Start Date" name='sDate' value={formData41.sDate} onChange={handleInputChange41} />
                         </div>
                         <p className='text-left text-lg mb-4'>
                             End Date :
                         </p>
                         <div className="w-full md:w-[18rem] lg:w-[35rem]">
-                            <Input size="lg" label="End Date" type='date' placeholder="Enter your End Date" name='eDate' value={formData.eDate} onChange={handleInputChange} />
+                            <Input size="lg" label="End Date" type='date' placeholder="Enter your End Date" name='eDate' value={formData41.eDate} onChange={handleInputChange41} />
                         </div>
                         <p className='text-left text-lg mb-4'>
                             Upload Document :
                         </p>
                         <div className="w-full md:w-[18rem] lg:w-[35rem]">
-                            <Input size="lg" label="Upload Document" placeholder="Enter your Upload Document" name='uploadDocument' value={formData.uploadDocument} onChange={handleInputChange} />
+                            <Input size="lg" label="Upload Document" placeholder="Enter your Upload Document" name='uploadDocument' value={formData41.uploadDocument} onChange={handleInputChange41} />
                         </div>
                         <p className='text-left text-lg mb-4'>
                             Leave Type :
                         </p>
                         <div className="w-full md:w-[18rem] lg:w-[35rem]">
-                            <Input size="lg" label="Leave Type" placeholder="Enter your Leave Type" name='leaveType' value={formData.leaveType} onChange={handleInputChange} />
+                            <Input size="lg" label="Leave Type" placeholder="Enter your Leave Type" name='leaveType' value={formData41.leaveType} onChange={handleInputChange41} />
                         </div>
                         <div className="mt-4 space-x-4 md:ml-0 ml-14">
-                            <Button color="green" className="w-32 h-12 rounded-full text-sm" onClick={handleUpdate}>Request</Button>
+                            <Button color="green" className="md:ml-0 ml-20 w-32 h-12 rounded-full text-sm" onClick={handleUpdate41}>Request</Button>
                         </div>
                     </div>
                 </div>
@@ -135,4 +99,4 @@ function Request() {
     )
 }
 
-export default Request;
+export default Requestt
