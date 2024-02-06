@@ -3,7 +3,7 @@ import {  FaRegCopy } from "react-icons/fa";
 import { IoIosPeople } from "react-icons/io";
 import { Progress } from "@material-tailwind/react";
 import { Card, Typography, Button } from "@material-tailwind/react";
-import {TABLE_HEAD, TABLE_ROWS} from "../Data/ClientlistData";
+import {TABLE_HEAD, TABLE_ROWS} from "../Data/Runningprojectdata";
 import { FaFilePdf } from "react-icons/fa6";
 import { BsFiletypeXls } from "react-icons/bs";
 
@@ -57,7 +57,7 @@ export default function RunningTask() {
         {/* upper lower part end */}
 
         <div className='mt-10 md:ml-48'>
-            <p className='text-semibold text-3xl'>Client List :-</p>
+            <p className='text-semibold text-3xl'>Running Projects :-</p>
          </div>
 
           <div className='flex mt-5 md:ml-28'>
@@ -97,28 +97,19 @@ export default function RunningTask() {
           </tr>
         </thead>
         <tbody>
-          {TABLE_ROWS.map(({Profile, name, Number, Email,Company,Address,ServiceProduct,Status,Action }, index) => {
+          {TABLE_ROWS.map(({project, clientName, startDate, endDate,duration,action }, index) => {
             const isLast = index === TABLE_ROWS.length - 1;
             const classes = isLast ? "p-4" : "p-4 border-b border-blue-gray-50";
  
             return (
-              <tr key={Profile}>
+              <tr key={project}>
                 <td className={classes}>
                   <Typography
                     variant="small"
                     color="blue-gray"
                     className="font-normal"
                   >
-                    {Profile}
-                  </Typography>
-                </td>
-                <td className={classes}>
-                  <Typography
-                    variant="small"
-                    color="blue-gray"
-                    className="font-normal"
-                  >
-                    {name}
+                    {project}
                   </Typography>
                 </td>
                 <td className={classes}>
@@ -127,7 +118,16 @@ export default function RunningTask() {
                     color="blue-gray"
                     className="font-normal"
                   >
-                    {Number}
+                    {clientName}
+                  </Typography>
+                </td>
+                <td className={classes}>
+                  <Typography
+                    variant="small"
+                    color="blue-gray"
+                    className="font-normal"
+                  >
+                    {startDate}
                   </Typography>
                 </td>
                 <td className={classes}>
@@ -138,7 +138,7 @@ export default function RunningTask() {
                     color="blue-gray"
                     className="font-medium"
                   >
-                    {Email}
+                    {endDate}
                   </Typography>
                 </td>
                 <td className={classes}>
@@ -149,7 +149,7 @@ export default function RunningTask() {
                     color="blue-gray"
                     className="font-medium"
                   >
-                    {Company}
+                    {duration}
                   </Typography>
                 </td>
                 <td className={classes}>
@@ -160,42 +160,10 @@ export default function RunningTask() {
                     color="blue-gray"
                     className="font-medium"
                   >
-                    {Address}
+                    {action}
                   </Typography>
                 </td>
-                <td className={classes}>
-                  <Typography
-                    as="a"
-                    href="#"
-                    variant="small"
-                    color="blue-gray"
-                    className="font-medium"
-                  >
-                    {ServiceProduct}
-                  </Typography>
-                </td>
-                <td className={classes}>
-                  <Typography
-                    as="a"
-                    href="#"
-                    variant="small"
-                    color="blue-gray"
-                    className="font-medium"
-                  >
-                    {Status}
-                  </Typography>
-                </td>
-                <td className={classes}>
-                  <Typography
-                    as="a"
-                    href="#"
-                    variant="small"
-                    color="blue-gray"
-                    className="font-medium"
-                  >
-                    {Action}
-                  </Typography>
-                </td>
+               
               </tr>
             );
           })}

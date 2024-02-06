@@ -46,7 +46,7 @@ function Request() {
                         <ListItemPrefix>
                             <PresentationChartBarIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        <Link to="/">
+                        <Link to="/home">
                             Home
                         </Link>
                     </ListItem>
@@ -54,7 +54,7 @@ function Request() {
                         <ListItemPrefix>
                             <ShoppingBagIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        <Link to="/tasks">
+                        <Link to="/taskss">
                             Tasks
                         </Link>
                     </ListItem>

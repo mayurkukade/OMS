@@ -70,7 +70,7 @@ function Tasks() {
                         <ListItemPrefix>
                             <PresentationChartBarIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        <Link to="/">
+                        <Link to="/home">
                             Home
                         </Link>
                     </ListItem>
@@ -78,7 +78,7 @@ function Tasks() {
                         <ListItemPrefix>
                             <ShoppingBagIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        <Link to="/tasks">
+                        <Link to="/taskss">
                             <p>Tasks</p>
                         </Link>
                     </ListItem>
