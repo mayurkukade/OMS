@@ -49,7 +49,7 @@ export function Request() {
   return (
     <>
 
-<div class="grid grid-flow-col auto-cols-max">
+<div className="grid grid-flow-col auto-cols-max">
   <div><CommonNavSide /></div>
   <div>
     <div className="container mt-8 w-[50rem] place-items-center flex">

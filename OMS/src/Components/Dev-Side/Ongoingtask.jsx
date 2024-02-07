@@ -1,37 +1,14 @@
 // MyComponent.js
 import React from "react";
+
 import {
-  IconButton,
   Typography,
-  List,
-  ListItem,
-  ListItemPrefix,
-  ListItemSuffix,
-  Chip,
-  Accordion,
-  AccordionHeader,
-  Alert,
   Input,
-  Drawer,
-  Card,
   Progress,
   Checkbox,
   Textarea,
 } from "@material-tailwind/react";
-import {
-  PresentationChartBarIcon,
-  ShoppingBagIcon,
-  UserCircleIcon,
-  Cog6ToothIcon,
-  InboxIcon,
-  PowerIcon,
-} from "@heroicons/react/24/solid";
-import {
-  CubeTransparentIcon,
-  MagnifyingGlassIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+
 import CommonNavSide from "./CommonNavSide";
 
 export function Ongoingtask() {
@@ -48,21 +25,24 @@ export function Ongoingtask() {
 
   return (
     <>
-
-<div class="grid grid-flow-col auto-cols-max  ">
-  <div> <CommonNavSide/></div>
-  <div>  
-    <div className="contain flex justify-center mt-[4rem]  ">
-    <table className="h-[10rem] w-[40rem] border-collapse border border-black p-4">
+      <div className="grid grid-flow-col auto-cols-max  ">
+        <div>
+          <CommonNavSide />
+        </div>
+        <div>
+        <div className="contain justify-center  ">
+            <h1 className="text-center mb-[2rem] font-bold text-2xl text-amber-500">Welcome User</h1>
+            <div className="table border-2 border-gray-500 rounded-xl">
+            <table className="h-[10rem] w-full  p-4  ">
               <thead>
                 <tr>
-                  <th className="border-black text-black">Running task</th>
+                  <th className=" text-black  ">Running task</th>
                 </tr>
               </thead>
 
               <tbody className="text-black">
-                <tr className="border-black flex items-center">
-                  <td className="border-black p-[20px] flex items-center">
+                <tr className=" flex items-center">
+                  <td className=" p-[20px] flex items-center">
                     <div>
                       <h1>Website Development</h1>
                       <div className="w-full">
@@ -84,8 +64,8 @@ export function Ongoingtask() {
                   </td>
                 </tr>
 
-                <tr className="border-black flex items-center">
-                  <td className="border-black p-[20px] flex items-center">
+                <tr className="  flex items-center">
+                  <td className=" p-[20px] flex items-center">
                     <div>
                       <h1>Software Development</h1>
                       <div className="w-full">
@@ -107,114 +87,120 @@ export function Ongoingtask() {
                   </td>
                 </tr>
               </tbody>
-            </table>
-      </div>
-      <div className="class flex text-center justify-center mt-[4rem] text-black">
-        <h1>Running Tasks</h1>
-      </div>
-      <div className="container ">
-        <div class="grid grid-cols-3 gap-2 place-items-center mt-4 justify-center text-center">
-          <div class="text-start w-1/4  ">Token Id</div>
-          <div class="w-1/2">
-            <Input />
-          </div>
-          <div class="flex place-items-center">
-            <Checkbox />
-            Start
+            </table></div>
           </div>
 
-          <div class="text-start w-1/4">Due Date</div>
-          <div class="w-1/2">
-            <Input  />
+          <div className=" flex text-start justify-start mt-[4rem] text-black font-extrabold m-2">
+            <h1>Running Tasks</h1>
           </div>
-          <div class="flex place-items-center">
-            <Checkbox />
-            Submit
+          <div className="index bg-blue-400 font-bold text-white w-[2rem] ml-[1.5rem] h-[2rem] border rounded-[20px]  p-[20px] flex items-center justify-center">1</div>
+
+          <div className="container">
+            <div className="grid grid-cols-3 gap-4 justify-center p-4 m-2 ">
+              <div className="text-start">Token Name</div>
+              <div className="col-span-1">
+                <Input />
+              </div>
+              <div className="col-span-1 flex items-center space-x-2">
+                <Checkbox />
+                <span>Start</span>
+              </div>
+
+              <div className="text-start">Due Date</div>
+              <div className="col-span-1">
+                <Input />
+              </div>
+              <div className="col-span-1 flex items-center space-x-2">
+                <Checkbox />
+                <span>Submit</span>
+              </div>
+
+              <div className="text-start">Project Name</div>
+              <div className="col-span-1">
+                <Input />
+              </div>
+              <div className="col-span-1 flex items-center space-x-2">
+                <Checkbox />
+                <span>Pending/Pause</span>
+              </div>
+
+              <div className="text-start">Description</div>
+              <div className="col-span-2">
+                <Textarea />
+              </div>
+
+              <div className="text-start">Comments</div>
+              <div className="col-span-2">
+                <Textarea />
+              </div>
+
+              <div className="col-span-3 p-2">
+                <div className="flex button justify-end place-items-end">
+                  <button className="bg-green-500 p-2 rounded-lg hover:bg-blue-300 text-white">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="text-start w-1/4">Project Name</div>
-          <div class="w-1/2">
-            <Input  />
-          </div>
-          <div class="flex place-items-center">
-            <Checkbox />
-            Pending/Pause
+          <div className="border-b border-black w-full my-4"></div>
+
+          <div className="index bg-blue-400 text-white font-bold w-[2rem] ml-[1.5rem] h-[2rem] border rounded-[20px]  p-[20px] flex items-center justify-center">2</div>
+
+          <div className="container mt-2">
+            <div className="grid grid-cols-3 gap-4 justify-center p-4 m-2 ">
+              <div className="text-start">Token Name</div>
+              <div className="col-span-1">
+                <Input />
+              </div>
+              <div className="col-span-1 flex items-center space-x-2">
+                <Checkbox />
+                <span>Start</span>
+              </div>
+
+              <div className="text-start">Due Date</div>
+              <div className="col-span-1">
+                <Input />
+              </div>
+              <div className="col-span-1 flex items-center space-x-2">
+                <Checkbox />
+                <span>Submit</span>
+              </div>
+
+              <div className="text-start">Project Name</div>
+              <div className="col-span-1">
+                <Input />
+              </div>
+              <div className="col-span-1 flex items-center space-x-2">
+                <Checkbox />
+                <span>Pending/Pause</span>
+              </div>
+
+              <div className="text-start">Description</div>
+              <div className="col-span-2">
+                <Textarea />
+              </div>
+
+              <div className="text-start">Comments</div>
+              <div className="col-span-2">
+                <Textarea />
+              </div>
+
+              <div className="col-span-3 p-2">
+                <div className="flex justify-end place-items-end ">
+                  <button className="bg-red-300 p-2 rounded-lg hover:bg-blue-300 text-white mr-2">
+                    Cancel
+                  </button>
+                  <button className="bg-green-500 p-2 rounded-lg hover:bg-blue-300 text-white">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 mt-2">
-        <div className="name text-center">Description</div>
-        <div className="description flex justify-center ml-[6.5rem]">
-          <Textarea className="col-span-2 " />
-        </div><br></br>
-      </div>
-      <div className="grid grid-cols-3 mt-2">
-        <div className="name text-center ]">Comments</div>
-        <div className="Comments flex justify-center ml-[6.5rem]">
-          <Textarea className="col-span-2 " />
-        </div><br></br>
-      </div>
-      <div className=" flex button justify-center place-items-center mt-2 ">
-          <button class="bg-green-500 p-2 rounded-lg hover:bg-blue-300 text-white">
-            Save changes
-          </button>
-        </div>
-
-<div className=" p-4 mt-[2rem]">
-      <div className="container mt-[2rem]">
-        <div class="grid grid-cols-3 gap-2 place-items-center mt-4 justify-center">
-          <div class="text-start w-1/4  ">Token Id</div>
-          <div class="w-1/2">
-            <Input  />
-          </div>
-          <div class="flex place-items-center">
-            <Checkbox />
-            Start
-          </div>
-
-          <div class="text-start w-1/4">Due Date</div>
-          <div class="w-1/2">
-            <Input  />
-          </div>
-          <div class="flex place-items-center">
-            <Checkbox />
-            Submit
-          </div>
-
-          <div class="text-start w-1/4">Project Name</div>
-          <div class="w-1/2">
-            <Input  />
-          </div>
-          <div class="flex place-items-center">
-            <Checkbox />
-            Pending/Pause
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-3 mt-2 ">
-        <div className="name text-center ">Description</div>
-        <div className="description  ">
-          <Textarea className="col-span-2 "  />
-        </div>
-      </div>
-     
-
-      <div className=" flex button justify-center place-items-center mt-2 space-x-2">
-          <button class="bg-blue-500 p-2 rounded-lg hover:bg-red-300 text-white">
-          Cancel
-          </button>
-          <button class="bg-green-500 p-2 rounded-lg hover:bg-blue-300 text-white">
-            Save changes
-          </button>
-        </div>
-        </div></div>
-
-</div>
-
-
-   
-
-    
     </>
   );
 }
