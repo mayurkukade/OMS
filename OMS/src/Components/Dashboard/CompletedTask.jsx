@@ -8,10 +8,10 @@ import {
     IconButton,
     Tooltip,
 } from "@material-tailwind/react";
-import pdf from "../Images/pdf.svg";
-import csv from "../Images/csv.svg";
-import xls from "../Images/xls.svg";
-import * as XLSX from 'xlsx';
+// import pdf from "../Images/pdf.svg";
+// import csv from "../Images/csv.svg";
+// import xls from "../Images/xls.svg";
+// import * as XLSX from 'xlsx';
 
 function CompletedTask() {
 
@@ -93,7 +93,7 @@ function CompletedTask() {
       
 
     return (
-        <div className="md:ml-64">
+        <div className="">
             <div className="md:mx-10 lg:mx-20 xl:mx-32">
                 <div className='flex md:flex-row mt-10 md:ml-0 ml-36'>
                     <div className="md:w-1/5">
@@ -148,9 +148,9 @@ function CompletedTask() {
                 <div className='flex bg-gray-500 w-[50rem] justify-center text-center items-center h-auto'>
                     <Button color="amber" className="m-4">Add Task</Button>
                     <div className="flex space-x-2">
-                        <img src={pdf} alt="" className="w-8" />
+                        {/* <img src={pdf} alt="" className="w-8" />
                         <img src={csv} alt="" className="w-8" />
-                        <img src={xls} alt="" className="w-8" onClick={generateExcelFile}/>
+                        <img src={xls} alt="" className="w-8" onClick={generateExcelFile}/> */}
                     </div>
                 </div>
 

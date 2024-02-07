@@ -4,7 +4,7 @@ import Homedashboard from "./Components/Dashboard/Homedashboard";
 import Clientlist from "./Components/Dashboard/Clientlist";
 import AddClient from "./Components/Dashboard/AddClient";
 import Task from "./Components/Dashboard/Task";
-import RunningTask from "./Components/Dashboard/RunningTask";
+import RunningTasks from "./Components/Dashboard/RunningTasks";
 import AddProject from "./Components/Dashboard/AddProject";
 import AddClientPaymentAcc from "./Components/ClientReport/AddClientPaymentAcc";
 import AddExpence from "./Components/ClientReport/AddExpence"
@@ -19,9 +19,12 @@ import ClientPaymentReport from "./Components/Dashboard/ClientPaymentReport" ;
 import DevDash from "./Components/Dev-Side/DevDash";
 import Ongoingtask from "./Components/Dev-Side/Ongoingtask";
 import Request from "./Components/Dev-Side/Request";
-import Home from "./Components/OMS_EMP_BDE/Home";
-import Requests from "./Components/OMS_EMP_BDE/Requests";
-import Taskss from "./Components/OMS_EMP_BDE/Taskss";
+import Homes from "./Components/OMS_EMP_BDE/Homes";
+import Request3 from "./Components/OMS_EMP_BDE/Request3";
+import Task2 from "./Components/OMS_EMP_BDE/Task2";
+import LeaveManagement from "./Components/Dashboard/LeaveManagement";
+import EmployeeDevelopment from "./Components/Dashboard/EmployeeDevelopment";
+import TeamLead from "./Components/TeamLead/TeamLead";
 
 
 function App() {
@@ -35,7 +38,7 @@ function App() {
         <Route path="/clientlist" element={<Clientlist/>}/>
         <Route path="/addclient" element={<AddClient/>}/>
         <Route path="/task" element={<Task/>}/>
-        <Route path="/runningtask" element={<RunningTask/>}/>
+        <Route path="/runningtask" element={<RunningTasks/>}/>
         <Route path="/addproject" element={<AddProject/>}/>
         <Route path="/addclientpayment" element={<AddClientPaymentAcc/>}/>
         <Route path="/addexpence" element={<AddExpence/>}/>
@@ -48,8 +51,12 @@ function App() {
         <Route path="/addattendee" element={<AddAttendee/>}/>
         <Route path="/addclientpaymentacc" element={<AddClientPaymentAcc/>}/>
         <Route path="/clientpaymentreport" element={<ClientPaymentReport/>}/>
-      </Route>
+        <Route path="/leavemanagment" element={<LeaveManagement/>}/>
+        <Route path="/employeedev" element={<EmployeeDevelopment/>}/>
+        
 
+      </Route>
+      <Route path="/teamlead" element={<TeamLead/>}/>
       
        
         <Route path="/devdash" element={<DevDash/>}/>
@@ -57,9 +64,9 @@ function App() {
         <Route path="/request" element={<Request/>}/>
 
 
-        <Route path="/home" element={<Home/>}/>
-        <Route path="/requests" element={<Requests/>}/>
-        <Route path="/taskss" element={<Taskss/>}/>
+        <Route path="/home" element={<Homes/>}/>
+        <Route path="/requests" element={<Request3/>}/>
+        <Route path="/taskss" element={<Task2/>}/>
         
     </Routes>
     </>

@@ -1,20 +1,11 @@
 import { useState } from 'react';
 import {
     Input,
-    Card,
-    List,
-    ListItem,
-    ListItemPrefix,
-    Button
+    Button,
 } from "@material-tailwind/react";
-import {
-    PresentationChartBarIcon,
-    ShoppingBagIcon,
-    InboxIcon,
-} from "@heroicons/react/24/solid";
-import { Link } from 'react-router-dom';
 
-function Request() {
+function Request3() {
+
     const [formData, setFormData] = useState({
         lRequest: '',
         reason: '',
@@ -38,37 +29,9 @@ function Request() {
     const handleUpdate = () => {
         console.log(formData);
     };
-    return (
-        <div className='flex flex-col md:flex-row'>
-            <Card className="h-[calc(30vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 mt-20">
-                <List>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <PresentationChartBarIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Link to="/home">
-                            Home
-                        </Link>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <ShoppingBagIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Link to="/taskss">
-                            Tasks
-                        </Link>
-                    </ListItem>
-                    <ListItem>
-                        <ListItemPrefix>
-                            <InboxIcon className="h-5 w-5" />
-                        </ListItemPrefix>
-                        <Link to="/requests">
-                            Requests
-                        </Link>
-                    </ListItem>
-                </List>
-            </Card>
 
+    return (
+        <div>
             <div className='md:mr-20'>
                 <div className="">
                     <div className='flex md:flex-row mt-10 md:ml-0 ml-0 gap-2'>
@@ -135,4 +98,4 @@ function Request() {
     )
 }
 
-export default Request;
+export default Request3

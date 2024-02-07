@@ -29,7 +29,7 @@ function AddToken() {
         console.log(formData);
     };
     return (
-        <div className='md:ml-80'>
+        <div className=''>
             <div className="md:mx-10 lg:mx-20 xl:mx-32 md:ml-[20rem]">
                 <div className='flex md:flex-row mt-10 md:ml-0 ml-0 gap-2'>
                     <div className="md:w-1/6">
@@ -41,7 +41,7 @@ function AddToken() {
                             <p className='text-3xl'>3</p>
                         </div>
                     </div>
-                    <div className='md:w-1/5'>
+                    <div className='md:w-1/5 ml-20'>
                         <p className='text-left text-lg mb-4'>Active Employees</p>
                         <div className="flex gap-6">
                             <div className='flex gap-6 bg-[#adadad] w-36 h-20 rounded-2xl items-center justify-center'>

@@ -267,9 +267,11 @@ export default function Dashboardsidebar() {
             <ListItemPrefix>
             <VscTasklist   className="h-7 w-7" />
             </ListItemPrefix>
+            <Link to="/leavemanagment">
               <Typography color="blue-gray" className="mr-auto font-normal ml-2.5">
               Leave Management
               </Typography>
+              </Link>
             </AccordionHeader>
           </ListItem>
         </Accordion>
@@ -280,9 +282,11 @@ export default function Dashboardsidebar() {
             <ListItemPrefix>
             <FaPeopleRobbery   className="h-7 w-7" />
             </ListItemPrefix>
+            <Link to="/employeedev">
               <Typography color="blue-gray" className="mr-auto font-normal ml-2.5">
               Employee Developmen
               </Typography>
+              </Link>
             </AccordionHeader>
           </ListItem>
         </Accordion>
