@@ -476,7 +476,7 @@ export function DevDash() {
         </div>
         <div className="md:col-span-2 mt-4 md:ml-4 ">
           <div className="mx-4">
-            <h1 className="text-center mb-4 font-bold text-2xl text-amber-500">Welcome User</h1>
+            <h1 className="text-center mb-4 font-bold text-2xl text-amber-500 mt-[2rem]">Welcome User</h1>
             <div className="table w-full p-4 border rounded-xl">
               <table className="w-full p-4">
                 <thead>

@@ -30,70 +30,68 @@ export function Ongoingtask() {
           <CommonNavSide />
         </div>
         <div>
-        <div className="contain justify-center  ">
-            <h1 className="text-center mb-[2rem] font-bold text-2xl text-amber-500">Welcome User</h1>
-            <div className="table border-2 border-gray-500 rounded-xl">
-            <table className="h-[10rem] w-full  p-4  ">
-              <thead>
-                <tr>
-                  <th className=" text-black  ">Running task</th>
-                </tr>
-              </thead>
-
-              <tbody className="text-black">
-                <tr className=" flex items-center">
-                  <td className=" p-[20px] flex items-center">
-                    <div>
-                      <h1>Website Development</h1>
+          <div className="mx-4">
+            <h1 className="text-center mb-4 font-bold text-2xl text-amber-500 mt-[2rem]">
+              Welcome User
+            </h1>
+            <div className="table w-full p-4 border rounded-xl">
+              <table className="w-full p-4">
+                <thead>
+                  <tr>
+                    <th className="text-black">Running task</th>
+                  </tr>
+                </thead>
+                <tbody className="text-black">
+                  <tr className="flex items-center">
+                    <td className="p-4 flex items-center">
                       <div className="w-full">
                         <div className="mb-2 flex items-center justify-between gap-4">
                           <Typography
                             color="blue-gray"
                             variant="h6"
-                            className="w-[40rem]"
+                            className="w-full md:w-[40rem]"
                           >
-                            Completed
+                            Website Development
                           </Typography>
                           <Typography color="blue-gray" variant="h6">
-                            50%
+                            Completed
                           </Typography>
                         </div>
                         <Progress value={50} />
                       </div>
-                    </div>
-                  </td>
-                </tr>
+                    </td>
+                  </tr>
 
-                <tr className="  flex items-center">
-                  <td className=" p-[20px] flex items-center">
-                    <div>
-                      <h1>Software Development</h1>
+                  <tr className="flex items-center">
+                    <td className="p-4 flex items-center">
                       <div className="w-full">
                         <div className="mb-2 flex items-center justify-between gap-4">
                           <Typography
                             color="blue-gray"
                             variant="h6"
-                            className="w-[40rem]"
+                            className="w-full md:w-[40rem]"
                           >
-                            Completed
+                            Software Development
                           </Typography>
                           <Typography color="blue-gray" variant="h6">
-                            50%
+                            Completed
                           </Typography>
                         </div>
                         <Progress value={50} />
                       </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
 
           <div className=" flex text-start justify-start mt-[4rem] text-black font-extrabold m-2">
             <h1>Running Tasks</h1>
           </div>
-          <div className="index bg-blue-400 font-bold text-white w-[2rem] ml-[1.5rem] h-[2rem] border rounded-[20px]  p-[20px] flex items-center justify-center">1</div>
+          <div className="index bg-blue-400 font-bold text-white w-[2rem] ml-[1.5rem] h-[2rem] border rounded-[20px]  p-[20px] flex items-center justify-center">
+            1
+          </div>
 
           <div className="container">
             <div className="grid grid-cols-3 gap-4 justify-center p-4 m-2 ">
@@ -146,7 +144,9 @@ export function Ongoingtask() {
 
           <div className="border-b border-black w-full my-4"></div>
 
-          <div className="index bg-blue-400 text-white font-bold w-[2rem] ml-[1.5rem] h-[2rem] border rounded-[20px]  p-[20px] flex items-center justify-center">2</div>
+          <div className="index bg-blue-400 text-white font-bold w-[2rem] ml-[1.5rem] h-[2rem] border rounded-[20px]  p-[20px] flex items-center justify-center">
+            2
+          </div>
 
           <div className="container mt-2">
             <div className="grid grid-cols-3 gap-4 justify-center p-4 m-2 ">

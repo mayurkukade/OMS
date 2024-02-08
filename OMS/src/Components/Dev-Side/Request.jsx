@@ -52,7 +52,7 @@ export function Request() {
 <div className="grid grid-flow-col auto-cols-max">
   <div><CommonNavSide /></div>
   <div>
-    <div className="container mt-8 w-[50rem] place-items-center flex">
+    <div className="container mt-[5rem] w-[50rem] place-items-center flex">
       <form className="max-w-[50rem] mx-auto bg-white p-8 border border-gray-300 shadow-md rounded-md">
         <h1>Request</h1>
         <div className="flex mb-4">
