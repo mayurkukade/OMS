@@ -82,7 +82,8 @@ export function CommonNavSide() {
                 d="M6 18L18 6M6 6l12 12"
               />
             </svg>
-          ) : (
+          ) 
+          : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -97,7 +98,8 @@ export function CommonNavSide() {
                 d="M4 6h16M4 12h16m-7 6h7"
               />
             </svg>
-          )}
+          )
+          }
         </IconButton>
         <div className="m-2">
           <button className="bg-white">

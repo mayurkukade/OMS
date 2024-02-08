@@ -12,6 +12,7 @@
   "dependencies": {
     "@heroicons/react": "^2.1.1",
     "@material-tailwind/react": "^2.1.8",
+    "@mui/material": "^5.15.7",
     "amqplib": "^0.10.3",
     "apexcharts": "^3.45.1",
     "react": "^18.2.0",

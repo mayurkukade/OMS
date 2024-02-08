@@ -93,54 +93,53 @@ export function Ongoingtask() {
             1
           </div>
 
-          <div className="container">
-            <div className="grid grid-cols-3 gap-4 justify-center p-4 m-2 ">
-              <div className="text-start">Token Name</div>
-              <div className="col-span-1">
-                <Input />
-              </div>
-              <div className="col-span-1 flex items-center space-x-2">
-                <Checkbox />
-                <span>Start</span>
-              </div>
+          <div class="container mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center p-4 m-2">
+        <div class="text-start">Token Name</div>
+        <div class="col-span-1">
+            <Input />
+        </div>
+        <div class="col-span-1 flex items-center space-x-2">
+            <Checkbox />
+            <span>Start</span>
+        </div>
 
-              <div className="text-start">Due Date</div>
-              <div className="col-span-1">
-                <Input />
-              </div>
-              <div className="col-span-1 flex items-center space-x-2">
-                <Checkbox />
-                <span>Submit</span>
-              </div>
+        <div class="text-start">Due Date</div>
+        <div class="col-span-1">
+            <Input />
+        </div>
+        <div class="col-span-1 flex items-center space-x-2">
+            <Checkbox />
+            <span>Submit</span>
+        </div>
 
-              <div className="text-start">Project Name</div>
-              <div className="col-span-1">
-                <Input />
-              </div>
-              <div className="col-span-1 flex items-center space-x-2">
-                <Checkbox />
-                <span>Pending/Pause</span>
-              </div>
+        <div class="text-start">Project Name</div>
+        <div class="col-span-1">
+            <Input />
+        </div>
+        <div class="col-span-1 flex items-center space-x-2">
+            <Checkbox />
+            <span>Pending/Pause</span>
+        </div>
 
-              <div className="text-start">Description</div>
-              <div className="col-span-2">
-                <Textarea />
-              </div>
+        <div class="text-start">Description</div>
+        <div class="col-span-2">
+            <Textarea />
+        </div>
 
-              <div className="text-start">Comments</div>
-              <div className="col-span-2">
-                <Textarea />
-              </div>
+        <div class="text-start">Comments</div>
+        <div class="col-span-2">
+            <Textarea />
+        </div>
 
-              <div className="col-span-3 p-2">
-                <div className="flex button justify-end place-items-end">
-                  <button className="bg-green-500 p-2 rounded-lg hover:bg-blue-300 text-white">
-                    Save changes
-                  </button>
-                </div>
-              </div>
+        <div class="col-span-3 md:col-span-2 lg:col-span-3 p-2">
+            <div class="flex button justify-end place-items-end">
+                <button class="bg-green-500 p-2 rounded-lg hover:bg-blue-300 text-white">Save changes</button>
             </div>
-          </div>
+        </div>
+    </div>
+</div>
+
 
           <div className="border-b border-black w-full my-4"></div>
 
