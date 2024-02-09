@@ -37,12 +37,12 @@ export function SignUp() {
         <Card color="transparent" 
         shadow={false} 
         className="justify-center items-center"
-        style={{
-                backgroundImage: `url('${signInImage}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                minHeight: "50vh",
-            }}
+        // style={{
+        //         backgroundImage: `url('${signInImage}')`,
+        //         backgroundSize: "cover",
+        //         backgroundPosition: "center",
+        //         minHeight: "50vh",
+        //     }}
         >
             <Typography variant="h4" color="blue-gray">
                 Registration
@@ -65,6 +65,7 @@ export function SignUp() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
+                        required
                     />
                     <Typography variant="h6" color="blue-gray" className="-mb-3">
                         User Id
@@ -79,6 +80,7 @@ export function SignUp() {
                         name="uId"
                         value={formData.uId}
                         onChange={handleChange}
+                        required
                     />
                     <Typography variant="h6" color="blue-gray" className="-mb-3">
                         Contact Number
@@ -93,6 +95,7 @@ export function SignUp() {
                         name="cNo"
                         value={formData.cNo}
                         onChange={handleChange}
+                        required
                     />
                     <Typography variant="h6" color="blue-gray" className="-mb-3">
                         Your Email
@@ -107,6 +110,7 @@ export function SignUp() {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
+                        required
                     />
                     <Typography variant="h6" color="blue-gray" className="-mb-3">
                         Password
@@ -122,6 +126,7 @@ export function SignUp() {
                         name="password"
                         value={formData.password}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <Checkbox

@@ -33,25 +33,25 @@ export function SignIn() {
         <Card color="transparent"
             shadow={false}
             className="justify-center items-center"
-            style={{
-                backgroundImage: `url('${signInImage}')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                minHeight: "50vh",
-            }}
+            // style={{
+            //     backgroundImage: `url('${signInImage}')`,
+            //     backgroundSize: "cover",
+            //     backgroundPosition: "center",
+            //     minHeight: "50vh",
+            // }}
         >
-            <Typography variant="h4" color="blue-gray" className="text-white">
+            <Typography variant="h4" color="blue-gray" className="text-black">
                 Sign In
             </Typography>
             <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96" onSubmit={handleSubmit}>
                 <div className="mb-1 flex flex-col gap-6">
-                    <Typography variant="h6" color="blue-gray" className="-mb-3 text-white">
+                    <Typography variant="h6" color="blue-gray" className="-mb-3 text-black">
                         Your Email
                     </Typography>
                     <Input
                         size="lg"
                         placeholder="Enter your email"
-                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-white"
+                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-black"
                         labelProps={{
                             className: "before:content-none after:content-none",
                         }}
@@ -59,14 +59,14 @@ export function SignIn() {
                         value={formData.email}
                         onChange={handleChange}
                     />
-                    <Typography variant="h6" color="blue-gray" className="-mb-3 text-white">
+                    <Typography variant="h6" color="blue-gray" className="-mb-3 text-black">
                         Password
                     </Typography>
                     <Input
                         type="password"
                         size="lg"
                         placeholder="********"
-                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-white"
+                        className=" !border-t-blue-gray-200 focus:!border-t-gray-900 text-black"
                         labelProps={{
                             className: "before:content-none after:content-none",
                         }}
@@ -75,12 +75,12 @@ export function SignIn() {
                         onChange={handleChange}
                     />
                 </div>
-                <Button type="submit" className="mt-6 text-md text-white" fullWidth>
+                <Button type="submit" className="mt-6 text-md text-black text-white" fullWidth>
                     Sign In
                 </Button>
-                <Typography color="gray" className="mt-4 text-center font-normal text-white">
+                <Typography color="gray" className="mt-4 text-center font-normal text-black">
                     Don't have any account?{" "}
-                    <Link to="/registerHere" className="font-medium text-gray-900 text-white">
+                    <Link to="/registerHere" className="font-medium text-gray-900">
                         Register Here
                     </Link>
                 </Typography>

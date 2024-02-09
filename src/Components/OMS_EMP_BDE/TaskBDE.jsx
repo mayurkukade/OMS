@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import { PencilIcon } from "@heroicons/react/24/solid";
 
-function Task2() {
+function TaskBDE() {
 
     // Task Page
 
@@ -56,12 +56,12 @@ function Task2() {
 
     return (
         <div>
-            <div className='mr-32'>
+            <div className='md:ml-28'>
 
                 {/* Total Calls/Messages */}
 
-                <Card className="w-full md:w-[25rem] lg:w-[55.6rem] mt-4">
-                    <p className='text-black font-semibold text-xl ml-4 mt-5'>Total Calls/Messages</p>
+                <p className='text-black font-semibold text-xl ml-4 mt-5'>Total Calls/Messages</p>
+                <Card className="overflow-auto w-[25.6rem] md:w-[35rem] lg:w-[63.2rem] mt-4">
                     <CardBody className=" px-0">
                         <table className="w-full min-w-max table-auto text-left">
                             <thead>
@@ -203,10 +203,10 @@ function Task2() {
 
                 {/* Total Replies */}
 
-                <Card className="w-full md:w-[25rem] lg:w-[45rem] mt-4">
-                    <p className='text-black font-semibold text-xl ml-4 mt-5'>Total Replies</p>
+                <p className='text-black font-semibold text-xl ml-4 mt-5'>Total Replies</p>
+                <Card className="overflow-auto w-[25.6rem] md:w-[35rem] lg:w-[45.2rem] mt-4">
                     <CardBody className=" px-0">
-                        <table className="w-full min-w-max table-auto text-left">
+                        <table className="w-full min-w-max table-auto text-center">
                             <thead>
                                 <tr>
                                     {TABLE_HEAD2.map((head) => (
@@ -315,9 +315,8 @@ function Task2() {
                 </Card>
 
                 {/* Total People Consulted */}
-
-                <Card className="w-full md:w-[25rem] lg:w-[55.6rem] mt-4">
-                    <p className='text-black font-semibold text-xl ml-4 mt-5'>Total People Consulted</p>
+                <p className='text-black font-semibold text-xl ml-4 mt-5'>Total People Consulted</p>
+                <Card className="overflow-auto w-[25.6rem] md:w-[35rem] lg:w-[63.2rem] mt-4">
                     <CardBody className=" px-0">
                         <table className="w-full min-w-max table-auto text-left">
                             <thead>
@@ -441,4 +440,4 @@ function Task2() {
     )
 }
 
-export default Task2
+export default TaskBDE

@@ -9,12 +9,18 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import ClientPaymentReport from './Components/Dashboards/ClientPaymentReport'
 // import ExpenceReport from './Components/Dashboards/ExpenceReport'
 // import ClientReport from './Components/Dashboards/ClientReport'
+
+// Team BDE
+import Homee from './Components/OMS_EMP_BDE/Home';
+
+// Team HR
 // import Home_Hr from "./Components/OMS_HR/Home_Hr"
 
 // Team Lead
-import { TeamLead } from './Components/Dashboards/TeamLead';
+// import { TeamLead } from './Components/Dashboards/TeamLead';
 
-// import Home from "./Components/OMS_EMP_BDE/Home"
+
+
 // import { SignUp } from './Components/SignUp';
 // import SignIn from './Components/SignIn';
 
@@ -38,12 +44,13 @@ function App() {
       {/* <SideBar/> */}
       <Router>
         <Routes>
-          {/* <Route path="/" element={<Home />} /> */}
+        <Route path='/' element={<Homee/>} />
           {/* <Route path='/' element={<SignUp/>} />
           <Route path='/signIn' element={<SignIn/>} />
           <Route path='/registerHere' element={<SignUp/>} /> */}
+          
           {/* <Route path="/" element={<Home_Hr/>} /> */}
-          <Route path="/" element={<TeamLead/>} />
+          {/* <Route path="/" element={<TeamLead/>} /> */}
         </Routes>
       </Router>
     </>

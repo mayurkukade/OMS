@@ -10,43 +10,44 @@ import {
     ShoppingBagIcon,
     InboxIcon,
 } from "@heroicons/react/24/solid";
-import Task2 from './Task2';
-import Request3 from './Request3';
-import Home1 from './Home1';
+import HomeBDE from './HomeBDE';
+import TaskBDE from './TaskBDE';
+import RequestBDE from './RequestBDE';
 
-function Home() {
+
+function Homee() {
 
     const [open1, setOpen1] = useState(true);
     const [open2, setOpen2] = useState(false);
     const [open3, setOpen3] = useState(false);
 
-    function HomeBDE() {
+    function HomeBDE1() {
         setOpen3(false);
         setOpen2(false);
         setOpen1(true);
     }
 
-    function Tasks() {
+    function TasksBDE1() {
         setOpen1(false);
         setOpen3(false);
         setOpen2(true);
     }
 
-    function Request() {
+    function RequestBDE1() {
         setOpen2(false);
         setOpen1(false);
         setOpen3(true);
     }
 
     return (
-        <div className='flex flex-col md:flex-row'>
-            <Card className="h-[calc(30vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5 mt-14">
+        <div className='flex flex-col md:flex-row '>
+            <Card className="h-[calc(30vh-2rem)] md:ml-0 ml-20 w-full max-w-[15rem] p-4 shadow-xl shadow-blue-gray-900/5 mt-14">
                 <List>
                     <ListItem>
                         <ListItemPrefix>
                             <PresentationChartBarIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        <p onClick={HomeBDE}>
+                        <p onClick={HomeBDE1}>
                             Home
                         </p>
                     </ListItem>
@@ -54,7 +55,7 @@ function Home() {
                         <ListItemPrefix>
                             <ShoppingBagIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        <p onClick={Tasks}>
+                        <p onClick={TasksBDE1}>
                             Tasks
                         </p>
                     </ListItem>
@@ -62,7 +63,7 @@ function Home() {
                         <ListItemPrefix>
                             <InboxIcon className="h-5 w-5" />
                         </ListItemPrefix>
-                        <p onClick={Request}>
+                        <p onClick={RequestBDE1}>
                             Requests
                         </p>
                     </ListItem>
@@ -70,14 +71,14 @@ function Home() {
             </Card>
 
             <div>
-                {open1 && (<Home1 HomeBDE={HomeBDE}/>)}
+                {open1 && (<HomeBDE HomeBDE={HomeBDE1}/>)}
 
-                {open2 && (<Task2 Tasks={Tasks}/>)}
+                {open2 && (<TaskBDE TaskBDE={TasksBDE1}/>)}
 
-                {open3 && (<Request3 Request={Request}/>)}
+                {open3 && (<RequestBDE RequestBDE={RequestBDE1}/>)}
             </div>
         </div>
     )
 }
 
-export default Home
+export default Homee

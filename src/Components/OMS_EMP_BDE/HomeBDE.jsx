@@ -4,10 +4,10 @@ import {
     Input,
     Card,
     Typography,
-    RadioButton
+    // RadioButton
 } from "@material-tailwind/react";
 
-function Home1() {
+function HomeBDE() {
 
     const [selectedOption, setSelectedOption] = useState('');
     const [formInputs, setFormInputs] = useState({
@@ -44,9 +44,9 @@ function Home1() {
 
     return (
         <div>
-            <div className='flex flex-col md:flex-row'>
+            <div className='flex flex-col md:flex-row md:ml-28'>
                 <div className="md:ml-4">
-                    <div className='flex md:flex-row mt-4 ml-2 md:ml-0 gap-2'>
+                    <div className='flex md:flex-row mt-4 ml-2  md:ml-0 gap-2'>
                         <p className="text-xl md:text-2xl lg:text-4xl text-blue-600 font-bold mb-2 ml-2">Welcome, XYZ !!</p>
                         <div className='flex space-x-2 md:ml-[23rem] ml-36'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="29" viewBox="0 0 31 29" fill="none">
@@ -60,14 +60,61 @@ function Home1() {
                     <div className="col flex-wrap bg-white border border-black md:w-[25rem] lg:w-[45rem] rounded-xl mt-2">
                         <div className="flex items-center ml-2 mt-2">
                             <p className='text-lg md:text-xl lg:text-2xl'>Token ID :</p>
-                            <div className='ml-4 md:ml-9'>
-                                <div className='flex space-x-2 md:ml-[23rem] ml-36'>
-                                    {/* Your radio buttons */}
-                                    <RadioButton id="done" label="Done" checked={selectedOption === 'done'} onChange={handleCheckboxChange} />
-                                    <RadioButton id="pause" label="Pause" checked={selectedOption === 'pause'} onChange={handleCheckboxChange} />
-                                    <RadioButton id="pending" label="Pending" checked={selectedOption === 'pending'} onChange={handleCheckboxChange} />
-                                    <RadioButton id="close" label="Close" checked={selectedOption === 'close'} onChange={handleCheckboxChange} />
+                            <div className='flex ml-4 md:ml-9'>
+                                {/* <div className='flex space-x-2 md:ml-[15rem] ml-36'> */}
+                                <div className="flex">
+                                    <input
+                                        type="radio"
+                                        id="done"
+                                        name="status"
+                                        className="form-radio h-5 w-5 text-blue-500"
+                                        checked={selectedOption === 'done'}
+                                        onChange={() => handleCheckboxChange('done')}
+                                    />
+                                    <label htmlFor="done" className="ml-2 text-gray-700">
+                                        Done
+                                    </label>
                                 </div>
+                                <div className="flex">
+                                    <input
+                                        type="radio"
+                                        id="pause"
+                                        name="status"
+                                        className="form-radio h-5 w-5 text-blue-500"
+                                        checked={selectedOption === 'pause'}
+                                        onChange={() => handleCheckboxChange('pause')}
+                                    />
+                                    <label htmlFor="pause" className="ml-2 text-gray-700">
+                                        Pause
+                                    </label>
+                                </div>
+                                <div className="flex">
+                                    <input
+                                        type="radio"
+                                        id="pending"
+                                        name="status"
+                                        className="form-radio h-5 w-5 text-blue-500"
+                                        checked={selectedOption === 'pending'}
+                                        onChange={() => handleCheckboxChange('pending')}
+                                    />
+                                    <label htmlFor="pending" className="ml-2 text-gray-700">
+                                        Pending
+                                    </label>
+                                </div>
+                                <div className="flex">
+                                    <input
+                                        type="radio"
+                                        id="close"
+                                        name="status"
+                                        className="form-radio h-5 w-5 text-blue-500"
+                                        checked={selectedOption === 'close'}
+                                        onChange={() => handleCheckboxChange('close')}
+                                    />
+                                    <label htmlFor="close" className="ml-2 text-gray-700">
+                                        Close
+                                    </label>
+                                </div>
+                                {/* </div> */}
                             </div>
                         </div>
                         <div className="col flex-wrap bg-white border border-black md:w-[25rem] lg:w-[45rem] rounded-xl mt-2">
@@ -85,11 +132,11 @@ function Home1() {
                                 />
                             </div>
                             {/* Start Date input */}
-                            <div className='flex'>
+                            <div className='flex ml-2 mt-2'>
                                 <p className='text-left text-lg mt-2'>
                                     Start Date :
                                 </p>
-                                <div className="w-full md:w-[18rem] lg:w-[35rem] ml-6">
+                                <div className="w-full md:w-[18rem] lg:w-[35rem] ml-8">
                                     <Input
                                         size="lg"
                                         label="Start Date"
@@ -102,11 +149,11 @@ function Home1() {
                                 </div>
                             </div>
                             {/* End Date input */}
-                            <div className='flex'>
+                            <div className='flex ml-2 mt-2'>
                                 <p className='text-left text-lg mb-4 mt-5'>
                                     End Date :
                                 </p>
-                                <div className="w-full md:w-[18rem] lg:w-[35rem] ml-8 mt-3">
+                                <div className="w-full md:w-[18rem] lg:w-[35rem] ml-10 mt-3">
                                     <Input
                                         size="lg"
                                         label="End Date"
@@ -119,11 +166,11 @@ function Home1() {
                                 </div>
                             </div>
                             {/* Durations input */}
-                            <div className='flex'>
+                            <div className='flex ml-2 mt-2'>
                                 <p className='text-left text-lg mb-4 mt-3'>
                                     Durations :
                                 </p>
-                                <div className="w-full md:w-[18rem] lg:w-[35rem] ml-6 mt-1">
+                                <div className="w-full md:w-[18rem] lg:w-[35rem] ml-8 mt-1">
                                     <Input
                                         size="lg"
                                         label="Durations"
@@ -136,11 +183,11 @@ function Home1() {
                                 </div>
                             </div>
                             {/* Assigned By input */}
-                            <div className='flex'>
+                            <div className='flex ml-2 mt-2'>
                                 <p className='text-left text-lg mb-4 mt-2'>
                                     Assigned By :
                                 </p>
-                                <div className="w-full md:w-[18rem] lg:w-[35rem] ml-1">
+                                <div className="w-full md:w-[18rem] lg:w-[35rem] ml-3">
                                     <Input
                                         size="lg"
                                         label="Assigned By"
@@ -160,8 +207,8 @@ function Home1() {
             {/* In Process Table */}
 
             <div className='mr-32'>
-                <Card className="w-full md:w-[25rem] lg:w-[45rem] mt-4">
-                    <p className='text-black font-semibold text-xl ml-4 mt-5'>In Process</p>
+                <p className='text-black font-semibold text-xl ml-4 mt-5'>In Process</p>
+                <Card className="overflow-auto w-[25.6rem] md:w-[35rem] lg:w-[63.2rem] mt-4">
                     <CardBody className=" px-0">
                         <table className="w-full min-w-max table-auto text-left">
                             <thead>
@@ -270,7 +317,7 @@ function Home1() {
 
                 {/* Done Table */}
 
-                <Card className="w-full md:w-[25rem] lg:w-[45rem] mt-4 mb-4">
+                <Card className="overflow-auto w-[25.6rem] md:w-[35rem] lg:w-[63.2rem] ml-2 mt-5 mb-4">
                     <p className='text-black font-semibold text-xl ml-4 mt-5'>Done</p>
                     <CardBody className=" px-0">
                         <table className="w-full min-w-max table-auto text-left">
@@ -384,4 +431,4 @@ function Home1() {
     )
 }
 
-export default Home1
+export default HomeBDE

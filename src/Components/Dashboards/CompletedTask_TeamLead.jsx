@@ -1,4 +1,5 @@
 import { PencilIcon } from "@heroicons/react/24/solid";
+import { Breadcrumbs } from "@material-tailwind/react";
 import { useState } from 'react';
 import {
     Card,
@@ -77,10 +78,10 @@ function CompletedTask_TeamLead() {
         const ws = XLSX.utils.aoa_to_sheet([['Hello', 'World']]);
         const wb = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb, ws, 'Sheet1');
-      
+
         // Create Excel file blob
         const blob = XLSX.write(wb, { bookType: 'xlsx', type: 'blob' });
-      
+
         // Create download link and trigger download
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -89,8 +90,8 @@ function CompletedTask_TeamLead() {
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-      };
-      
+    };
+
 
     return (
         <div className="md:ml-">
@@ -150,7 +151,7 @@ function CompletedTask_TeamLead() {
                     <div className="flex space-x-2">
                         <img src={pdf} alt="" className="w-8" />
                         <img src={csv} alt="" className="w-8" />
-                        <img src={xls} alt="" className="w-8" onClick={generateExcelFile}/>
+                        <img src={xls} alt="" className="w-8" onClick={generateExcelFile} />
                     </div>
                 </div>
 
@@ -293,11 +294,20 @@ function CompletedTask_TeamLead() {
                     </select>
                     {selectedOption && <p className="mt-2">Selected option: {selectedOption}</p>}
 
-                    <div className="flex space-x-4 mt-3">
+                    {/* <div className="flex space-x-4 mt-3">
                         <p>BDE</p>
                         <p>Development</p>
                         <p>HR</p>
-                    </div>
+                    </div> */}
+                    <Breadcrumbs className="mt-1">
+                        <a href="#" className="opacity-60">
+                            BDE
+                        </a>
+                        <a href="#" className="opacity-60">
+                            Development
+                        </a>
+                        <a href="#">HR</a>
+                    </Breadcrumbs>
                 </div>
 
                 {/* Second Table */}
